@@ -1,0 +1,22 @@
+{
+  "name": "colmeia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "build": "^0.1.4",
+    "dotenv-safe": "^6.1.0",
+    "express": "^4.16.4",
+    "joi": "^14.0.6",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.3.14"
+  }
+}
