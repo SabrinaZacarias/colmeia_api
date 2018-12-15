@@ -1,17 +1,18 @@
-require("dotenv-safe").load();
-const jwt = require("jsonwebtoken");
-const express = require("express");
-const usersRoute = require("./users/routes.js");
-const users = require("./users/users.js");
-const app = express();
-const PORT = process.env.PORT || 5000;
+require("dotenv-safe").load()
+const jwt = require("jsonwebtoken")
+const express = require("express")
+const usersRoute = require("./users/routes.js")
+const users = require("./users/users.js")
+const app = express()
+const PORT = process.env.PORT || 5000
 
 
-var mongoose = require("mongoose");
-mongoose.connect("mongodb://sabrina:users1234@ds115035.mlab.com:15035/integrar");
+const mongoose = require("mongoose")
+mongoose.connect(process.env.MONGODB)
+require('dotenv').config()
 
 
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on("error", console.error.bind(console, "Erro de conexão:"));
 db.once("open", function() {
   console.log("Conexão feita com sucesso");
