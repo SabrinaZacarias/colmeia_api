@@ -9,7 +9,8 @@ const PORT = process.env.PORT || 5000
 
 const mongoose = require("mongoose")
 mongoose.connect(process.env.MONGODB)
-require('dotenv').config()
+mongoose.Promise = global.Promise;
+
 
 
 const db = mongoose.connection;
