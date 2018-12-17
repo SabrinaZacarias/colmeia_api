@@ -60,7 +60,9 @@ router.post('/', (req, res) => {
     name: req.body.name,
     phone: req.body.phone,
     email: req.body.email,
-    password: req.body.password
+    password: req.body.password,
+    cnpj:req.body.cnpj,
+    entidade:req.body.entidade
   });
 
   try {
@@ -149,6 +151,8 @@ function validatesRequest(params) {
     phone: Joi.string().min(10).required(),
     email: Joi.string().min(3).required(),
     password: Joi.string().min(3).required(),
+    cnpj: Joi.string().min(9).required(),
+    entidade: Joi.string().min(3).required(),
   }
   const validation = Joi.validate(params, schema);
 
