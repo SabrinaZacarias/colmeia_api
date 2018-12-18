@@ -4,7 +4,7 @@ const express = require("express")
 const usersRoute = require("./users/routes.js")
 const users = require("./users/users.js")
 const app = express()
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 80
 
 
 const mongoose = require("mongoose")
