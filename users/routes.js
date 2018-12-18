@@ -151,8 +151,8 @@ function validatesRequest(params) {
     phone: Joi.string().min(10).required(),
     email: Joi.string().min(3).required(),
     password: Joi.string().min(3).required(),
-    cnpj: Joi.string().min(9).required(),
-    entidade: Joi.string().min(3).required(),
+    cnpj: Joi.string().min(9),
+    entidade: Joi.string().min(3),
   }
   const validation = Joi.validate(params, schema);
 
