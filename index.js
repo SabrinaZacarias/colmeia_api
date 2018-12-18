@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080
 
 const mongoose = require("mongoose")
 mongoose.connect("mongodb://sabrina:users1234@ds115035.mlab.com:15035/integrar")
-mongoose.Promise = global.Promise;
+
 
 
 
